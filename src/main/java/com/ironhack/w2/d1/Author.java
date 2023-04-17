@@ -45,4 +45,22 @@ public class Author {
                 ", publishedBooks=" + publishedBooks +
                 '}';
     }
+
+    public int getBookListSize() {
+        return publishedBooks.size();
+    }
+
+    public String getFullName() {
+        return name + " " + lastname;
+    }
+
+    public Book[] booklistToArray() {
+        Book[] books = new Book[getBookListSize()];
+
+        for (int i = 0; i < getBookListSize(); i++) {
+            books[i] = publishedBooks.get(i);
+        }
+
+        return books;
+    }
 }
